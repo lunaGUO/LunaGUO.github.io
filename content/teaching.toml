@@ -1,10 +1,17 @@
 type = "card"
 title = "Teaching"
-description = "Courses I have taught or assisted with."
+description = "Teaching and educational experience"
 
 [[items]]
-title = "Example Course"
+title = "DOE project: Development and Validation of Smart Building Technology Modules for Academic and Professional Education"
+subtitle = "Research Assistant @ TAMU, collborating with slipstream"
+date = "2023-2024"
+content = "Contributed to the development and review of smart building technology education modules. More information is available [here](https://slipstreaminc.org/education/smart-building-technology)."
+tags = ["Education"]
+
+[[items]]
+title = "Business Administration"
 subtitle = "Teaching Assistant"
-date = "2024"
-content = "Description of the course and responsibilities. Content of this course can be found [here](https://example.com)."
-tags = ["Undergraduate", "CS"]
+date = "2020-2021"
+content = "Assisted the instructor with a series of courses in the Master of Engineering Management (MEM) program at Tongji University. Responsibilities included managing attendance records, coordinating group discussion schedules, and tracking the progress of course projects."
+tags = ["Master", "MEM"]

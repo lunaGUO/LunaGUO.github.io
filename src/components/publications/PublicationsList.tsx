@@ -72,6 +72,9 @@ export default function PublicationsList({ config, publications, embedded = fals
                         {config.description}
                     </p>
                 )}
+                <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-2">
+                    <span className="underline underline-offset-4 decoration-neutral-400">Underlined</span> authors denote co-first authors (equal contribution).
+                </p>
             </div>
 
             {/* Search and Filter Controls */}

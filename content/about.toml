@@ -3,9 +3,12 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Computational Physics",
-  "Mathematical Principles",
-  "Proof of Theorems"
+  "Advanced Controls in Buidlings",
+  "Occupancy-centric Controls",
+  "Urban Building Energy Simulation",
+  "Large-scale Data Analysis",
+  "AI for Science",
+  "BIM to BEM"
 ]
 
 [[sections]]

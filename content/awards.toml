@@ -3,25 +3,78 @@ title = "Awards"
 description = "Honors and awards I have received."
 
 [[items]]
-title = "Example Award"
-subtitle = "Organization"
+title = "J. Mike Walker '66 Impact Award in Mechanical Engineering"
+subtitle = "Texas A&M University"
 date = "2025"
-content = "Description of the award."
 
 [[items]]
-title = "Example Award"
-subtitle = "Organization"
+title = "Melbern G. Glasscock '59 Endowed Graduate Fellowship in Mechanical Engineering"
+subtitle = "Texas A&M University"
+date = "2025"
+
+[[items]]
+title = "ASHRAE Graduate Grant-in-Aid Award"
+subtitle = "ASHRAE"
+date = "2025"
+
+[[items]]
+title = "Graduate Travel Award"
+subtitle = "Department of Mechanical Engineering, Texas A&M University"
+date = "2024-2025"
+
+[[items]]
+title = "Brenda and Jerry Gray '62 Fellowship in Mechanical Engineering"
+subtitle = "Texas A&M University"
 date = "2024"
-content = "Description of the award."
 
 [[items]]
-title = "Example Award"
-subtitle = "Organization"
-date = "2023"
-content = "Description of the award."
-
-[[items]]
-title = "Example Award"
-subtitle = "Organization"
+title = "Outstanding Graduate of Shanghai Municipality (top 1%)"
+subtitle = "Shanghai Municipality"
 date = "2022"
-content = "Description of the award."
+
+[[items]]
+title = "Global AI Competition"
+subtitle = "Electrical and Mechanical Services Department (EMSD), HKSAR Government & Guangdong Provincial Association for Science and Technology"
+date = "March 2022"
+content = "Best Use of Tencent Cloud, Huawei Most Innovative Use of Data, and Gold Award (Team leader, top 1 on the leaderboard). Task: predict hourly cooling load for the next three months using about a year and a half of historical data."
+
+[[items]]
+title = "IFLYTEK A.I. Developer Competition: Demand Strategy Optimization Based on Flexible Load"
+subtitle = "Sun Power"
+date = "Jun. - Oct. 2022"
+content = "First Place (First author, First Prize). Task: rearrange flexible load and battery schedules over 5 months at 5-minute intervals to reduce electricity cost."
+
+[[items]]
+title = "Outstanding Student, Tongji University (top 2%)"
+subtitle = "Tongji University"
+date = "2021"
+
+[[items]]
+title = "National Scholarship (top 0.2%)"
+subtitle = "Ministry of Education of the People's Republic of China"
+date = "2021"
+
+[[items]]
+title = "3rd Prize of Yada Scholarship"
+subtitle = "Tongji University"
+date = "2020"
+
+[[items]]
+title = "Outstanding Graduate of Chongqing Municipality (top 1%)"
+subtitle = "Chongqing Municipality"
+date = "2019"
+
+[[items]]
+title = "National Encouragement Scholarship (3 times, top 5%)"
+subtitle = "Chongqing University"
+date = "2017-2019"
+
+[[items]]
+title = "Outstanding Student, Chongqing University (top 5%)"
+subtitle = "Chongqing University"
+date = "2018"
+
+[[items]]
+title = "Excellent League Member, Chongqing University (top 5%)"
+subtitle = "Chongqing University"
+date = "2017"

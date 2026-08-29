@@ -154,7 +154,7 @@ export default function Profile({ author, social, features, researchInterests }:
                                         setShowAddress(!isAddressPinned);
                                         setLastClickedTooltip('address');
                                     }}
-                                    className={`p-2 sm:p-2 transition-colors duration-200 ${isAddressPinned
+                                    className={`inline-flex items-center justify-center p-2 sm:p-2 transition-colors duration-200 ${isAddressPinned
                                         ? 'text-accent'
                                         : 'text-neutral-600 dark:text-neutral-400 hover:text-accent'
                                         }`}
@@ -231,7 +231,7 @@ export default function Profile({ author, social, features, researchInterests }:
                                         setShowEmail(!isEmailPinned);
                                         setLastClickedTooltip('email');
                                     }}
-                                    className={`p-2 sm:p-2 transition-colors duration-200 ${isEmailPinned
+                                    className={`inline-flex items-center justify-center p-2 sm:p-2 transition-colors duration-200 ${isEmailPinned
                                         ? 'text-accent'
                                         : 'text-neutral-600 dark:text-neutral-400 hover:text-accent'
                                         }`}
@@ -289,16 +289,21 @@ export default function Profile({ author, social, features, researchInterests }:
                         );
                     }
                     return (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-2 sm:p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors duration-200"
-                            aria-label={link.name}
-                        >
-                            <IconComponent className="h-5 w-5" />
-                        </a>
+                        <div key={link.name} className="relative group">
+                            <a
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center p-2 sm:p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors duration-200"
+                                aria-label={link.name}
+                            >
+                                <IconComponent className="h-5 w-5" />
+                            </a>
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full bg-neutral-800 text-white px-3 py-1.5 rounded-lg text-sm font-medium shadow-lg whitespace-nowrap opacity-0 scale-90 pointer-events-none transition-all duration-150 group-hover:opacity-100 group-hover:scale-100 z-10">
+                                {link.name}
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800"></div>
+                            </div>
+                        </div>
                     );
                 })}
             </div>
