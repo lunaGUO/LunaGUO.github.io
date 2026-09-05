@@ -114,12 +114,12 @@ export default function ResearchOverview() {
                         </g>
                     </g>
                     <g id="ro-headings">
-                        <text className="cls-6" transform="translate(420 180)"><tspan x="0" y="0">AI &amp; BIG DATA</tspan></text>
-                        <line className="cls-12" x1="420" y1="199" x2="496" y2="199" />
+                        <text className="cls-6" transform="translate(385 180)"><tspan x="0" y="0">AI &amp; BIG DATA</tspan></text>
+                        <line className="cls-12" x1="385" y1="199" x2="461" y2="199" />
                         <text className="cls-3" transform="translate(1025 180)"><tspan x="0" y="0">CONTROLS</tspan></text>
                         <line className="cls-13" x1="1025" y1="199" x2="1075" y2="199" />
-                        <text className="cls-2" transform="translate(1160 698)"><tspan x="0" y="0">SIMULATION</tspan></text>
-                        <line className="cls-15" x1="1160" y1="716" x2="1224" y2="716" />
+                        <text className="cls-2" transform="translate(1120 698)"><tspan x="0" y="0">SIMULATION</tspan></text>
+                        <line className="cls-15" x1="1120" y1="716" x2="1184" y2="716" />
                     </g>
                     <g id="ro-ai-topics">
                         <text className="cls-9" transform="translate(370.3 276.8)"><tspan x="0" y="0">Data-driven</tspan></text>
@@ -160,20 +160,20 @@ export default function ResearchOverview() {
                         <text className="cls-7" transform="translate(980.8 583.9)"><tspan>[</tspan><Ref code="C2" /><tspan>]</tspan></text>
                     </g>
                     <g id="ro-simulation-topics">
-                        <text className="cls-9" transform="translate(630 670)"><tspan x="0" y="0">Urban building energy modeling</tspan></text>
-                        <text className="cls-7" transform="translate(774 704)">
+                        <text className="cls-9" transform="translate(610 670)"><tspan x="0" y="0">Urban building energy modeling</tspan></text>
+                        <text className="cls-7" transform="translate(754 704)">
                             <tspan>[on-going, </tspan>
                             <Ref code="P7" />
                             <tspan>]</tspan>
                         </text>
-                        <text className="cls-9" transform="translate(722 752)"><tspan x="0" y="0">Cleanroom simulation</tspan></text>
-                        <text className="cls-7" transform="translate(774 786)">
+                        <text className="cls-9" transform="translate(702 752)"><tspan x="0" y="0">Cleanroom simulation</tspan></text>
+                        <text className="cls-7" transform="translate(754 786)">
                             <tspan>[on-going, </tspan>
                             <Ref code="P5" />
                             <tspan>]</tspan>
                         </text>
-                        <text className="cls-9" transform="translate(777.4 834)"><tspan x="0" y="0">BIM to BEM</tspan></text>
-                        <text className="cls-7" transform="translate(817.8 868)"><RefGroup parts={['C1', 'P1']} /></text>
+                        <text className="cls-9" transform="translate(757.4 834)"><tspan x="0" y="0">BIM to BEM</tspan></text>
+                        <text className="cls-7" transform="translate(797.8 868)"><RefGroup parts={['C1', 'P1']} /></text>
                     </g>
                 </g>
             </svg>
