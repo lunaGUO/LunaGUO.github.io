@@ -59,6 +59,35 @@ export default function PublicationsList({ config, publications, embedded = fals
         });
     }, [publications, searchQuery, selectedYear, selectedType]);
 
+    // Group publications journal-first, then conference, then any remaining types,
+    // preserving the existing newest-first order within each group.
+    const groupedPublications = useMemo(() => {
+        const typeOrder: Publication['type'][] = [
+            'journal', 'conference', 'workshop', 'book-chapter', 'book', 'thesis', 'preprint', 'patent', 'technical-report',
+        ];
+        const groups: { type: Publication['type']; items: Publication[] }[] = [];
+        for (const type of typeOrder) {
+            const items = filteredPublications.filter(pub => pub.type === type);
+            if (items.length > 0) groups.push({ type, items });
+        }
+        const knownTypes = new Set(typeOrder);
+        const leftover = filteredPublications.filter(pub => !knownTypes.has(pub.type));
+        if (leftover.length > 0) groups.push({ type: leftover[0].type, items: leftover });
+        return groups;
+    }, [filteredPublications]);
+
+    const typeGroupLabels: Partial<Record<Publication['type'], string>> = {
+        journal: 'Journal Articles',
+        conference: 'Conference Papers',
+        workshop: 'Workshop Papers',
+        'book-chapter': 'Book Chapters',
+        book: 'Books',
+        thesis: 'Theses',
+        preprint: 'Preprints',
+        patent: 'Patents',
+        'technical-report': 'Technical Reports',
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -188,19 +217,31 @@ export default function PublicationsList({ config, publications, embedded = fals
             </div>
 
             {/* Publications Grid */}
-            <div className="space-y-6">
+            <div className="space-y-8">
                 {filteredPublications.length === 0 ? (
                     <div className="text-center py-12 text-neutral-500">
                         {messages.publications.noResults}
                     </div>
                 ) : (
-                    filteredPublications.map((pub, index) => (
+                    groupedPublications.map((group) => (
+                    <div key={group.type}>
+                        {groupedPublications.length > 1 && (
+                            <div className="flex items-center gap-3 mb-4">
+                                <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400 whitespace-nowrap">
+                                    {typeGroupLabels[group.type] || group.type}
+                                </h2>
+                                <div className="flex-grow border-t border-neutral-200 dark:border-neutral-800" />
+                            </div>
+                        )}
+                        <div className="space-y-6">
+                    {group.items.map((pub, index) => (
                         <motion.div
                             key={pub.id}
+                            id={pub.numberLabel}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: 0.1 * index }}
-                            className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
+                            className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200 scroll-mt-24"
                         >
                             <div className="flex flex-col md:flex-row gap-6">
                                 {pub.preview && (
@@ -218,7 +259,23 @@ export default function PublicationsList({ config, publications, embedded = fals
                                 )}
                                 <div className="flex-grow">
                                     <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary mb-2 leading-tight`}>
-                                        <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
+                                        {pub.numberLabel && (
+                                            <span className="text-accent font-mono text-sm font-medium mr-2 align-middle">
+                                                [{pub.numberLabel}]
+                                            </span>
+                                        )}
+                                        {pub.doi ? (
+                                            <a
+                                                href={`https://doi.org/${pub.doi}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="hover:text-accent hover:underline underline-offset-2 transition-colors"
+                                            >
+                                                <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
+                                            </a>
+                                        ) : (
+                                            <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
+                                        )}
                                     </h3>
                                     <p className={`${embedded ? "text-sm" : "text-base"} text-neutral-600 dark:text-neutral-400 mb-2`}>
                                         {pub.authors.map((author, idx) => (
@@ -339,6 +396,9 @@ export default function PublicationsList({ config, publications, embedded = fals
                                 </div>
                             </div>
                         </motion.div>
+                    ))}
+                        </div>
+                    </div>
                     ))
                 )}
             </div>

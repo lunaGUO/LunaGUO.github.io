@@ -40,6 +40,7 @@ export interface Publication {
   keywords?: string[];
   type: PublicationType;
   status: PublicationStatus;
+  numberLabel?: string;
   citations?: number;
   impactFactor?: number;
   quartile?: 'Q1' | 'Q2' | 'Q3' | 'Q4';

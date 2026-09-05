@@ -1,0 +1,24 @@
+[[education]]
+date = "2023.01 - Present"
+title = "Ph.D. Candidate in Mechanical Engineering"
+description = "***Texas A&M University***. GPA 4.0/4.0. Supervised by Dr. [Zheng O'Neill](https://engineering.tamu.edu/mechanical/profiles/oneill-zheng.html)."
+
+[[education]]
+date = "2019.09 - 2022.03"
+title = "M.S. in HVAC & Gas Engineering"
+description = "***Tongji University***. Supervised by [Prof. Peng Xu](https://a434.tongji.edu.cn/english/GROUP/Team_leader.htm)."
+
+[[education]]
+date = "2015.09 - 2019.06"
+title = "B.E. in Built Environment"
+description = "***Chongqing University***. GPA 3.69/4.0, rank 2/113. Minor in Business Administration."
+
+[[experience]]
+date = "2025.05 - 2025.08"
+title = "Machine Learning Research Intern"
+description = "***Hewlett Packard Enterprise***. Developed reinforcement learning control for data center liquid cooling systems."
+
+[[experience]]
+date = "2024.06 - 2024.08"
+title = "Graduate Research Intern"
+description = "***Oak Ridge National Laboratory***. Developed control-oriented models for model-predictive control of grid-interactive buildings."

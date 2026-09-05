@@ -1,0 +1,27 @@
+type = "card"
+title = "Talks"
+description = "Posters and invited presentations."
+
+[[items]]
+title = "Engineering and Policy Insight into Residential Electricity Demand Resilience in a Changing Climate: Evidence from Large-Scale Smart Meter Data"
+subtitle = "Oral presentation, Texas A&M Conference on Energy, College Station, United States"
+date = "Sep. 2025"
+content = "M. Guo, S.-M. Cheong, Z. O'Neill"
+
+[[items]]
+title = "An Integrated Approach to Modeling, Decision-making, and Control for Energy Efficient Manufacturing"
+subtitle = "Poster presentation, 2025 Texas HSRUs and HSIs: STEAM Research Showcase, College Station, United States"
+date = "Sep. 2025"
+content = "M. Guo, Z. O'Neill, Z. Yang, C. Chang"
+
+[[items]]
+title = "Characterizing Residential Electricity Consumption in Harris County: Key Patterns and Demographic Influences"
+subtitle = "Poster presentation, 2024 Texas Energy Summit, Austin, United States"
+date = "Nov. 2024"
+content = "M. Guo, Z. O'Neill, S. Cheong"
+
+[[items]]
+title = "Prediction of Occupant Number and Identification of Occupant Behaviors via Learning Algorithms – A Case Study in a Small Office Building"
+subtitle = "Seminar, 2023 ASHRAE Annual Conference, Tampa, United States"
+date = "Jun. 2023"
+content = "M. Guo, Z. Pang, Z. O'Neill"

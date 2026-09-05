@@ -4,6 +4,8 @@ import Profile from '@/components/home/Profile';
 import About from '@/components/home/About';
 import SelectedPublications from '@/components/home/SelectedPublications';
 import News, { NewsItem } from '@/components/home/News';
+import Timeline, { TimelineEntry } from '@/components/home/Timeline';
+import ResearchOverview from '@/components/home/ResearchOverview';
 import PublicationsList from '@/components/publications/PublicationsList';
 import TextPage from '@/components/pages/TextPage';
 import CardPage from '@/components/pages/CardPage';
@@ -14,7 +16,7 @@ import { useLocaleStore } from '@/lib/stores/localeStore';
 
 interface SectionConfig {
   id: string;
-  type: 'markdown' | 'publications' | 'list';
+  type: 'markdown' | 'publications' | 'list' | 'timeline' | 'research_overview';
   title?: string;
   source?: string;
   filter?: string;
@@ -22,6 +24,10 @@ interface SectionConfig {
   content?: string;
   publications?: Publication[];
   items?: NewsItem[];
+  education_title?: string;
+  experience_title?: string;
+  education?: TimelineEntry[];
+  experience?: TimelineEntry[];
 }
 
 type PageData =
@@ -95,6 +101,19 @@ export default function HomePageClient({ dataByLocale, defaultLocale }: HomePage
                         title={section.title}
                       />
                     );
+                  case 'timeline':
+                    return (
+                      <Timeline
+                        key={section.id}
+                        title={section.title}
+                        educationTitle={section.education_title}
+                        experienceTitle={section.experience_title}
+                        education={section.education}
+                        experience={section.experience}
+                      />
+                    );
+                  case 'research_overview':
+                    return <ResearchOverview key={section.id} />;
                   default:
                     return null;
                 }

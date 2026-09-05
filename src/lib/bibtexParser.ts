@@ -40,7 +40,7 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
   const highlightNames = getHighlightNames(locale);
   const entries = bibtexParse.toJSON(bibtexContent);
 
-  return entries.map((entry: { entryType: string; citationKey: string; entryTags: Record<string, string> }, index: number) => {
+  const sorted: Publication[] = entries.map((entry: { entryType: string; citationKey: string; entryTags: Record<string, string> }, index: number) => {
     const tags = entry.entryTags;
 
     // Parse authors
@@ -119,6 +119,24 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
     // Sort by month descending (December to January)
     return monthB - monthA;
   });
+
+  // Number publications by type in chronological order (oldest = 1),
+  // walking the newest-first sorted list backwards.
+  const numberPrefixes: Partial<Record<PublicationType, string>> = {
+    journal: 'J',
+    conference: 'C',
+  };
+  const countsByType: Partial<Record<PublicationType, number>> = {};
+  for (let i = sorted.length - 1; i >= 0; i--) {
+    const pub = sorted[i];
+    const prefix = numberPrefixes[pub.type];
+    if (prefix) {
+      countsByType[pub.type] = (countsByType[pub.type] || 0) + 1;
+      pub.numberLabel = `${prefix}${countsByType[pub.type]}`;
+    }
+  }
+
+  return sorted;
 }
 
 function getHighlightNames(locale?: string): string[] {

@@ -5,9 +5,8 @@ title = "About"
 research_interests = [
   "Advanced Controls in Buidlings",
   "Occupancy-centric Controls",
-  "Urban Building Energy Simulation",
+  "Urban Building Energy Modeling",
   "Large-scale Data Analysis",
-  "AI for Science",
   "BIM to BEM"
 ]
 
@@ -16,6 +15,17 @@ id = "about"
 type = "markdown"
 source = "bio.md"
 title = "About"
+
+[[sections]]
+id = "research_overview"
+type = "research_overview"
+
+[[sections]]
+id = "timeline"
+type = "timeline"
+source = "timeline.toml"
+education_title = "Education"
+experience_title = "Professional Experience"
 
 [[sections]]
 id = "featured_publications"

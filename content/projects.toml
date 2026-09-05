@@ -1,0 +1,52 @@
+type = "card"
+title = "Projects"
+description = "Selected research projects."
+
+[[items]]
+number = "P7"
+title = "Texas Grid Impact of Replacing Existing Residential AC with Heat Pumps"
+subtitle = "Funded by Daikin; lead graduate researcher at TAMU"
+date = "2026.06 - 2026.11"
+content = "Simulated the Texas grid impacts of replacing existing air-conditioning systems with federally compliant minimum-efficiency heat pumps and inverter-driven heat pumps using ResStock and EnergyPlus. Calibrated the EnergyPlus models of single-stage and inverter-based heat pumps using field test data."
+
+[[items]]
+number = "P6"
+title = "Large-Scale Smart Meter Data Analysis"
+subtitle = "Funded by Texas A&M University"
+date = "2024.05 - Present"
+content = "Data cleaning for real-world smart meter data from over 2 million consumers in the Greater Houston Area, Texas. Analyzed the energy resilience in a changing climate through 2090 by developing data-driven models. Correlated electricity consumption with demographic factors and tree canopy."
+
+[[items]]
+number = "P5"
+title = "An Integrated Approach to Modeling, Decision-Making and Control for Energy Efficient Manufacturing"
+subtitle = "Funded by the National Science Foundation (NSF); lead graduate researcher at TAMU"
+date = "2023.09 - Present"
+content = "Developed and validated control-oriented models for the HVAC systems of semiconductor cleanrooms. Designed and implemented a decision-making and adaptive control scheme for AHUs."
+
+[[items]]
+number = "P4"
+title = "Development and Validation of Smart Building Technology Modules for Academic and Professional Education"
+subtitle = "Funded by the U.S. Department of Energy (DOE); research assistant at TAMU"
+date = "2023.01 - 2025.12"
+content = "Polished and proofread educational modules on smart building technology."
+
+[[items]]
+number = "P3"
+title = "Quantification of HVAC Energy Savings for Occupancy Sensing in Buildings Through an Innovative Testing Methodology"
+subtitle = "Funded by the Advanced Research Projects Agency-Energy (ARPA-E); research assistant at TAMU"
+date = "2023.01 - 2024.08"
+content = "Maintained and troubleshot field-testing systems in a single-family home and a commercial building. Analyzed sensor accuracy, energy savings, and thermal comfort across three field tests. Extracted typical occupancy schedules from field-measured data using K-means clustering."
+
+[[items]]
+number = "P2"
+title = "Automatic HVAC Design"
+subtitle = "Funded by Tongji University Architectural Design Institute Co., Ltd.; research assistant at Tongji University"
+date = "2020 - 2021"
+content = "Developed an automatic configuration tool for AHU, FCU, and chiller sizing in Python."
+
+[[items]]
+number = "P1"
+title = "Target-Controlled Feedforward Management Technology for Green Buildings"
+subtitle = "Funded by the \"13th Five-Year Plan\" Key Research Program, China; research assistant at Tongji University"
+date = "2019 - 2021"
+content = "Developed an automatic tool to convert BIM (Revit) to BEM (EnergyPlus) through an intermediate gbXML file. Enabled automatic gbXML checking and IDF enrichment to ensure successful BIM-to-BEM conversion."

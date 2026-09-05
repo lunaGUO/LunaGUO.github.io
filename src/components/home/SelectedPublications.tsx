@@ -42,7 +42,23 @@ export default function SelectedPublications({ publications, title, enableOnePag
                         className="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-neutral-200 dark:border-[rgba(148,163,184,0.24)] hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
                     >
                         <h3 className="font-semibold text-primary mb-2 leading-tight">
-                            <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
+                            {pub.numberLabel && (
+                                <span className="text-accent font-mono text-sm font-medium mr-2 align-middle">
+                                    [{pub.numberLabel}]
+                                </span>
+                            )}
+                            {pub.doi ? (
+                                <a
+                                    href={`https://doi.org/${pub.doi}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-accent hover:underline underline-offset-2 transition-colors"
+                                >
+                                    <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
+                                </a>
+                            ) : (
+                                <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
+                            )}
                         </h3>
                         <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-1">
                             {pub.authors.map((author, idx) => (
@@ -58,7 +74,7 @@ export default function SelectedPublications({ publications, title, enableOnePag
                             ))}
                         </p>
                         <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-2">
-                            {pub.journal || pub.conference}
+                            {pub.journal || pub.conference} {pub.year}
                         </p>
                         {pub.description && (
                             <p className="text-sm text-neutral-500 dark:text-neutral-500 line-clamp-2">
