@@ -9,7 +9,8 @@ import {
     CalendarIcon,
     BookOpenIcon,
     ClipboardDocumentIcon,
-    DocumentTextIcon
+    DocumentTextIcon,
+    ArrowTrendingUpIcon
 } from '@heroicons/react/24/outline';
 import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
@@ -100,6 +101,26 @@ export default function PublicationsList({ config, publications, embedded = fals
                     <p className={`${embedded ? "text-base" : "text-lg"} text-neutral-600 dark:text-neutral-500 max-w-2xl`}>
                         {config.description}
                     </p>
+                )}
+                {config.citations !== undefined && (
+                    <a
+                        href={config.scholar_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={config.citations_updated ? `As of ${config.citations_updated}, via Google Scholar` : 'Via Google Scholar'}
+                        className="inline-flex items-center gap-2 mt-3 px-3 py-1.5 rounded-full bg-accent/10 hover:bg-accent/20 border border-accent/20 transition-colors duration-200 text-sm"
+                    >
+                        <ArrowTrendingUpIcon className="h-4 w-4 text-accent" />
+                        <span className="text-neutral-600 dark:text-neutral-400">citations</span>
+                        <span className="font-semibold text-primary">{config.citations.toLocaleString()}</span>
+                        {config.h_index !== undefined && (
+                            <>
+                                <span className="text-neutral-300 dark:text-neutral-700">|</span>
+                                <span className="text-neutral-600 dark:text-neutral-400">h-index</span>
+                                <span className="font-semibold text-primary">{config.h_index}</span>
+                            </>
+                        )}
+                    </a>
                 )}
                 <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-2">
                     <span className="underline underline-offset-4 decoration-neutral-400">Underlined</span> authors denote co-first authors (equal contribution).

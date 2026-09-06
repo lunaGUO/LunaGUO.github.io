@@ -8,13 +8,16 @@ title = "Texas Grid Impact of Replacing Existing Residential AC with Heat Pumps"
 subtitle = "Funded by Daikin; lead graduate researcher at TAMU"
 date = "2026.06 - 2026.11"
 content = "Simulated the Texas grid impacts of replacing existing air-conditioning systems with federally compliant minimum-efficiency heat pumps and inverter-driven heat pumps using ResStock and EnergyPlus. Calibrated the EnergyPlus models of single-stage and inverter-based heat pumps using field test data."
+image = "/projects/p7-resstock-workflow.png"
 
 [[items]]
 number = "P6"
 title = "Large-Scale Smart Meter Data Analysis"
-subtitle = "Funded by Texas A&M University"
+
 date = "2024.05 - Present"
 content = "Data cleaning for real-world smart meter data from over 2 million consumers in the Greater Houston Area, Texas. Analyzed the energy resilience in a changing climate through 2090 by developing data-driven models. Correlated electricity consumption with demographic factors and tree canopy."
+image = "/projects/p6-smart-meter-analysis.png"
+papers = ["J10"]
 
 [[items]]
 number = "P5"
@@ -22,13 +25,16 @@ title = "An Integrated Approach to Modeling, Decision-Making and Control for Ene
 subtitle = "Funded by the National Science Foundation (NSF); lead graduate researcher at TAMU"
 date = "2023.09 - Present"
 content = "Developed and validated control-oriented models for the HVAC systems of semiconductor cleanrooms. Designed and implemented a decision-making and adaptive control scheme for AHUs."
+link = "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2243931&HistoricalAwards=false"
+papers = ["J12", "C2"]
 
 [[items]]
 number = "P4"
 title = "Development and Validation of Smart Building Technology Modules for Academic and Professional Education"
-subtitle = "Funded by the U.S. Department of Energy (DOE); research assistant at TAMU"
+subtitle = "Funded by the U.S. Department of Energy (DOE) through Slipstream; research assistant at TAMU"
 date = "2023.01 - 2025.12"
 content = "Polished and proofread educational modules on smart building technology."
+link = "https://slipstreaminc.org/education/smart-building-technology"
 
 [[items]]
 number = "P3"
@@ -36,6 +42,8 @@ title = "Quantification of HVAC Energy Savings for Occupancy Sensing in Building
 subtitle = "Funded by the Advanced Research Projects Agency-Energy (ARPA-E); research assistant at TAMU"
 date = "2023.01 - 2024.08"
 content = "Maintained and troubleshot field-testing systems in a single-family home and a commercial building. Analyzed sensor accuracy, energy savings, and thermal comfort across three field tests. Extracted typical occupancy schedules from field-measured data using K-means clustering."
+link = "https://hvac.engr.tamu.edu/arpa-e/"
+papers = ["J5", "J7", "J8", "J11", "C4"]
 
 [[items]]
 number = "P2"
@@ -50,3 +58,6 @@ title = "Target-Controlled Feedforward Management Technology for Green Buildings
 subtitle = "Funded by the \"13th Five-Year Plan\" Key Research Program, China; research assistant at Tongji University"
 date = "2019 - 2021"
 content = "Developed an automatic tool to convert BIM (Revit) to BEM (EnergyPlus) through an intermediate gbXML file. Enabled automatic gbXML checking and IDF enrichment to ensure successful BIM-to-BEM conversion."
+image = "/projects/p1-bim2bem-workflow.jpg"
+details = "The workflow automates BIM-to-BEM conversion in three stages. First, a **BIM checker** validates the Revit model against a standard layer definition and exports a checked gbXML file. Second, a **gbXML editor** refines the geometry, and a **data converter** translates the edited gbXML into an initial IDF. Third, an **IDF checker** enriches that IDF with weather data, internal loads, and other information not captured in the BIM model, producing a simulation-ready file for EnergyPlus.\n\nCode: [BIM2BEM on GitHub](https://github.com/lunaGUO/BIM2BEM/tree/main)"
+papers = ["C1"]

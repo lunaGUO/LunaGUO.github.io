@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import { CardPageConfig } from '@/types/page';
 
@@ -82,6 +83,20 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                                 </ReactMarkdown>
                             </div>
                         )}
+                        {item.papers && item.papers.length > 0 && (
+                            <div className="flex flex-wrap items-center gap-2 mt-4">
+                                <span className="text-xs text-neutral-500 font-medium">Related publications:</span>
+                                {item.papers.map(code => (
+                                    <Link
+                                        key={code}
+                                        href={`/publications#${code}`}
+                                        className="text-xs font-mono text-accent hover:text-accent-dark bg-accent/10 hover:bg-accent/20 px-2 py-1 rounded transition-colors duration-150"
+                                    >
+                                        [{code}]
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
                         {item.tags && (
                             <div className="flex flex-wrap gap-2 mt-4">
                                 {item.tags.map(tag => (
@@ -90,6 +105,24 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                                     </span>
                                 ))}
                             </div>
+                        )}
+                        {item.link && (
+                            <a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block mt-4 text-accent hover:text-accent-dark text-sm font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+                            >
+                                View details →
+                            </a>
+                        )}
+                        {!item.link && (item.details || item.image) && item.number?.toUpperCase().startsWith('P') && (
+                            <Link
+                                href={`/projects/${item.number.toLowerCase()}`}
+                                className="inline-block mt-4 text-accent hover:text-accent-dark text-sm font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+                            >
+                                View details →
+                            </Link>
                         )}
                     </motion.div>
                 ))}
