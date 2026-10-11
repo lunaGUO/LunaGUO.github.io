@@ -2,7 +2,7 @@ type = "publication"
 title = "Publications"
 description = "A collection of my research work."
 source = "publications.bib"
-citations = 1006
+citations = 1022
 h_index = 9
 scholar_url = "https://scholar.google.com/citations?user=TzVFCFoAAAAJ&hl=en&oi=ao"
-citations_updated = "2026-09-28"
+citations_updated = "2026-10-10"

@@ -3,6 +3,20 @@ title = "Teaching"
 description = "Teaching and educational experience"
 
 [[items]]
+title = "Research Mentor @Texas A&M University"
+subtitle = "Mentored a high school student, undergraduate and early stage graduate students"
+date = " 2024 to present"
+content = "Mentored undergraduate and early-stage Ph.D. students in research projects, including research idea development, research tool utilization, and academic writing, resulting in co-authored conference publications. Mentored a high school student on a scientific project using ResStock to evaluate the energy impacts of rooftop photovoltaic installation."
+tags = ["Education"]
+
+[[items]]
+title = "Academy for Future Faculty Program @Texas A&M University"
+subtitle = "Future faculty training program"
+date = "2025-2026"
+content = "Participated in a faculty development program through the Center for the Integration of Research, Teaching, and Learning (CIRTL), with training focused on teaching and other faculty skills in STEM disciplines."
+tags = ["Education"]
+
+[[items]]
 title = "DOE project: Development and Validation of Smart Building Technology Modules for Academic and Professional Education"
 subtitle = "Research Assistant @ TAMU, collborating with slipstream"
 date = "2023-2024"
@@ -10,8 +24,8 @@ content = "Contributed to the development and review of smart building technolog
 tags = ["Education"]
 
 [[items]]
-title = "Business Administration"
-subtitle = "Teaching Assistant"
+title = "Teaching Assistant @ Tongji University"
+subtitle = "Teaching Assistant for Business Administration"
 date = "2020-2021"
 content = "Assisted the instructor with a series of courses in the Master of Engineering Management (MEM) program at Tongji University. Responsibilities included managing attendance records, coordinating group discussion schedules, and tracking the progress of course projects."
 tags = ["Master", "MEM"]
