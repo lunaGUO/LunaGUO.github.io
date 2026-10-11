@@ -50,10 +50,10 @@ export default function ResearchOverview() {
             <p className="text-base font-semibold text-primary mb-0.5">My research includes:</p>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1600 1000"
+                viewBox="0 0 1600 1100"
                 className="w-full h-auto"
                 role="img"
-                aria-label="Research landscape overview: AI &amp; Big Data, Controls, and Simulation, with links to related publications and projects"
+                aria-label="Research landscape overview: AI &amp; Big Data, Controls, and Simulation, with links to related publications and projects, and building types: Residential, Commercial, Cleanroom, Data Center"
             >
                 <defs>
                     <style>{`
@@ -80,6 +80,13 @@ export default function ResearchOverview() {
                         .cls-20 { stroke: #fff; stroke-opacity: .7; stroke-width: 2px; }
                         .ref-link { fill: inherit; cursor: pointer; }
                         .ref-link:hover { fill: var(--accent); text-decoration: underline; }
+                        .cls-bt-label { fill: #58657a; font-family: ArialMT, Arial; font-size: 24px; font-weight: 700; letter-spacing: .04em; }
+                        .cls-pill-text { fill: #17233a; font-family: ArialMT, Arial; font-size: 27px; font-weight: 600; }
+                        .cls-pill { fill: #fff; stroke-width: 2px; }
+                        .cls-pill-res { stroke: #2f69b8; }
+                        .cls-pill-com { stroke: #d9674e; }
+                        .cls-pill-clean { stroke: #238f85; }
+                        .cls-pill-dc { stroke: #7c5cbf; }
                     `}</style>
                     <linearGradient id="ro-linear-gradient" x1="501.7" y1="920" x2="502.7" y2="919" gradientTransform="translate(-802698 919967.8) scale(1600 -1000)" gradientUnits="userSpaceOnUse">
                         <stop offset="0" stopColor="#fbfdff" />
@@ -100,7 +107,7 @@ export default function ResearchOverview() {
                     </radialGradient>
                 </defs>
                 <g id="ro-background">
-                    <rect className="cls-10" y=".9" width="1600" height="1000" rx="28" ry="28" />
+                    <rect className="cls-10" y=".9" width="1600" height="1100" rx="28" ry="28" />
                 </g>
                 <g id="ro-Layer_1">
                     <g id="ro-domains">
@@ -175,6 +182,23 @@ export default function ResearchOverview() {
                         <text className="cls-9" transform="translate(757.4 834)"><tspan x="0" y="0">BIM to BEM</tspan></text>
                         <text className="cls-7" transform="translate(797.8 868)"><RefGroup parts={['C1', 'P1']} /></text>
                     </g>
+                </g>
+                <g id="ro-building-types">
+                    <text className="cls-bt-label" transform="translate(225 1044)"><tspan x="0" y="0">BUILDING TYPES</tspan></text>
+                    <line x1="225" y1="1054" x2="421" y2="1054" stroke="#58657a" strokeWidth="2" />
+                    <line x1="451" y1="1011" x2="451" y2="1059" stroke="#c7cfdb" strokeWidth="2" />
+
+                    <rect className="cls-pill cls-pill-res" x="481" y="1006" width="216" height="58" rx="29" ry="29" />
+                    <text className="cls-pill-text" textAnchor="middle" transform="translate(589 1044)"><tspan x="0" y="0">Residential</tspan></text>
+
+                    <rect className="cls-pill cls-pill-com" x="723" y="1006" width="200" height="58" rx="29" ry="29" />
+                    <text className="cls-pill-text" textAnchor="middle" transform="translate(823 1044)"><tspan x="0" y="0">Commercial</tspan></text>
+
+                    <rect className="cls-pill cls-pill-clean" x="949" y="1006" width="184" height="58" rx="29" ry="29" />
+                    <text className="cls-pill-text" textAnchor="middle" transform="translate(1041 1044)"><tspan x="0" y="0">Cleanroom</tspan></text>
+
+                    <rect className="cls-pill cls-pill-dc" x="1159" y="1006" width="216" height="58" rx="29" ry="29" />
+                    <text className="cls-pill-text" textAnchor="middle" transform="translate(1267 1044)"><tspan x="0" y="0">Data Center</tspan></text>
                 </g>
             </svg>
         </motion.section>
